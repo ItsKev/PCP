@@ -19,7 +19,7 @@ public class MyStack implements Stack {
     }
 
     public Element pop() {
-        if (this.top == null) {
+        if (this.isEmpty()) {
             return null; // TODO: Exception
         }
         Element element = this.top;
@@ -29,7 +29,7 @@ public class MyStack implements Stack {
     }
 
     public void print() {
-        if (this.top == null) {
+        if (this.isEmpty()) {
             System.out.println("print - Stack is empty");
         } else {
             System.out.print("print - Stack contains: ");
