@@ -4,6 +4,7 @@ public class MyStack implements Stack {
 
     private Element top;
 
+    @Override
     public void push(Element e) {
         if (this.top != null) {
             Element element = this.top;
@@ -14,10 +15,12 @@ public class MyStack implements Stack {
         }
     }
 
+    @Override
     public Element top() {
         return this.top; // TODO: Exception
     }
 
+    @Override
     public Element pop() {
         if (this.isEmpty()) {
             return null; // TODO: Exception
@@ -28,6 +31,7 @@ public class MyStack implements Stack {
         return element;
     }
 
+    @Override
     public void print() {
         if (this.isEmpty()) {
             System.out.println("print - Stack is empty");
@@ -46,10 +50,12 @@ public class MyStack implements Stack {
         }
     }
 
+    @Override
     public boolean isEmpty() {
         return this.top == null;
     }
 
+    @Override
     public int size() {
         int size = 0;
         Element element = this.top;
