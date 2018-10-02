@@ -32,3 +32,7 @@ offspring(X, Y) :- parent(Y, X).
 offspring(X, Y) :-
     parent(Y, Z),
     offspring(X, Z).
+
+% ex05
+% op(1150, xfx, mother).
+% op(1150, xfx, offspring).
