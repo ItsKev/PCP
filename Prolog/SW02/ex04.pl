@@ -12,4 +12,4 @@ color(LU,NW,OW,SZ,UR,ZG) :-
     n(ZG, LU), n(ZG, SZ),
     n(SZ, UR), n(SZ, NW),
     n(UR, NW),
-    n(NW, OW).
+    n(NW, OW), n(OW, UR).
