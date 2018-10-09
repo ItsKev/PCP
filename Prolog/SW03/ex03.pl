@@ -20,3 +20,26 @@ del([Head | Tail], X, Tail) :-
 del([Head | Tail], X, L) :-
     del(Tail, X, L1),
     make_list(Head, L1, L).
+
+
+%c
+
+mem_d(X, L) :- del(L, X, _).
+
+%d
+
+rev_acc([Head | Tail], A, R) :-
+    Tail = [],
+    make_list(Head, A, R).
+
+
+rev_acc([Head | Tail], A, R) :-
+    make_list(Head, A, A1),
+    rev_acc(Tail, A1, R).
+
+%e
+
+rev(L, R) :-
+    rev_acc(L, [], R).
+
+
