@@ -1,8 +1,9 @@
+fak_as(0,1).
+fak(0, 1).
 fak(N, F) :-
-    fak_as(N,F),
+    fak_as(N, F),
     !,
     writef("Hinweis: Fakultät von %w war gespeichert", [N]).
-fak(0, 1).
 fak(N, F) :-
 	N > 0,
 	N1 is N - 1,
