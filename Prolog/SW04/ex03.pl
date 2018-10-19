@@ -1,8 +1,8 @@
 %a
-% use_module(library(clpr)).
+:- use_module(library(clpr)).
 % { T = 15, M = 3*T, M+X = 2*(T+X) }.
 
-
+:- use_module(library(clpfd)).
 %b DONALD + GERALD = ROBERT use_module(library(clpfd)).
 donald_gerald_robert([D,O,N,A,L,D] + [G,E,R,A,L,D] = [R,O,B,E,R,T]) :-
     Vars = [D,O,N,A,L,G,E,R,B,T],

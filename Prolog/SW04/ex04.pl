@@ -68,7 +68,7 @@ solve(sudoku, X) :-
     replace_0(Sudoku_0, Sudoku),
     Sudoku = [A, B, C, D, E, F, G, H, I],
     sudoku([A, B, C, D, E, F, G, H, I]),
-    http_post('http://localhost:16316/problem/sudoku/', json(json([solution=[A, B, C, D, E, F, G, H, I], problemKey=X])), _, []),
+    http_post('http://localhost:16316/problem/sudoku/', json(json([solution=Sudoku, problemKey=X])), _, []),
     !.
 
 solve_rel(Relationship, First, Second, X) :-
@@ -82,7 +82,6 @@ solve_rel(Relationship, First, Second, X) :-
 replace_0(Input, Output) :-
     is_list(Input),
     maplist(replace_0, Input, Output).
-
 
 replace_0(0, _).
 replace_0(X, X).
