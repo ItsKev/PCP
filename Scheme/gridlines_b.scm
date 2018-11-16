@@ -138,7 +138,7 @@
     ; ...Ende der Gitterlinien-Funktionen
     
     ; Bild anzeigen
-    (gimp-display-new image)
+    ;(gimp-display-new image)
     (gimp-context-pop)
     (gimp-displays-flush)
     )
